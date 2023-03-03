@@ -3,8 +3,8 @@ const Car = require (`../models/car`)
 
 router.get (`/`, async (req,res) =>{
     try {
-        const car = await Car(req.body).find()
-        res.json(car)
+        const cars = await Car().find()
+        res.json(cars)
         } catch (error) {
             console.log(error)
             res.status(400).json({'message':'error creating resources'})
