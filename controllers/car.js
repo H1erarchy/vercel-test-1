@@ -3,7 +3,7 @@ const Car = require (`../models/car`)
 
 router.get (`/`, async (req,res) =>{
     try {
-        const cars = await Car().find()
+        const cars = await Car.find()
         res.json(cars)
         } catch (error) {
             console.log(error)
